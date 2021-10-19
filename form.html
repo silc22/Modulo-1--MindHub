@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="./favico.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mighty Ducks Hockey League</title>
+    <link rel="stylesheet" href="./assets/css/mdhl_2.css" type="text/css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="banner">
+        <!-- NAV-->
+        <div class="navBar">
+            <div class="brand">
+                <img src="./assets/img/Logo-mighty.png" alt="logo might ducks">
+            </div>
+            <h1 class="title">
+                Mighty Ducks <span>Hockey League</span>
+            </h1>
+            <nav class="menuNav">
+                <ul>
+                    <li><a class="uno" href="index.html">HOME</a></li>
+                    <li><a class="dos" href="about.html">About MDHL</a></li>
+                    <li><a class="uno" href="contact.html">Contact</a></li>
+                    <li><a class="dos" href="game_info.html">Game Info</a></li>
+                    <li><a class="uno" href="rules.html">Rules</a></li>
+                    <li><a class="dos" href="form.html">Form</a></li>
+                </ul>     
+            </nav>
+        </div>
+        <!-- BACKGROUND IMAGE -->
+        <div class="imgBanner formP">
+        </div>
+    </header>
+    <!-- CONTENIDO -->
+    <section class="container">
+        <!-- TITULO DE CADA PAGINA -->
+        <h2 class="subtitle">
+            Registration form
+        </h2>
+        <!-- ARTICULO DE CONTENIDO -->
+        <article class="contenido">
+            <form action="show_data.html" method="get">
+                <fieldset>
+                <div class="fName">
+                <!-- NOMBRE -->
+                    <label for="fname">Player's First Name:</label>
+                        <input type="text" name="name" id="fname">
+                <!-- APELLIDO -->
+                    <label for="lname">Last Name:</label>
+                        <input type="text" name="lastname" id="lname">
+                </div>
+                <div class="fDireccion">
+                <!-- DIRECCION -->
+                    <label for="address">Street Address:</label>
+                        <input type="text" name="address" id="address">
+                </div>
+                <div class="fCiudad">
+                <!-- CIUDAD -->
+                    <label for="city">City:</label>
+                        <input type="text" name="city" id="city">
+                <!-- CODIGO POSTAL -->
+                    <label for="zCode">Zip Code:</label>
+                        <input type="number" name="zip_Code" id="zCode">
+                </div>
+                <div class="fBirth">
+                <!-- FECHA DE NACIMIENTO -->
+                    <label for="birth">Birth Date:</label>
+                        <input type="date" name="birth" id="birth">
+                <!-- GENERO -->
+                    <p>Gender:</p>
+                        <label for="Mgender">Male</label>
+                            <input type="radio" name="gender" id="Mgender" value="male">
+                        <label for="Fgender">Female</label>
+                            <input type="radio" name="gender" id="Fgender" value="female">
+                </div>
+                <div class="fGrado">
+                <!-- GRADO -->
+                    <p><strong>Grade:</strong></p>
+                        <select name="grade" id="grade">
+                            <option disabled selected hidden> Choose an option</option>
+                            <option value="preschool">Pre-School</option>
+                            <option value="first">1rst</option>
+                            <option value="second">2nd</option>
+                            <option value="third">3rd</option>
+                            <option value="fourth">4th</option>
+                            <option value="fifth">5th</option>
+                        </select>
+                </div>
+                </fieldset>
+                <fieldset class="f1">
+                <!-- CLOSEST SCHOOL -->
+                    <p><strong>Which elementary shcool do you you live near?</strong></p>
+                    <p><strong>Closest School:</strong></p>
+                    <select name="closest" id="closest_school">
+                        <option disabled selected hidden> Choose an option</option>
+                        <option value="Katzenmaier">AJ Katzenmaier</option>
+                        <option value="Greenbay">Greenbay</option>
+                        <option value="Howard">Howard A Yeager</option>
+                        <option value="Marjorie">Marjorie P Hart</option>
+                        <option value="North">North Elementary</option>
+                        <option value="South">South  Elementary</option>
+                    </select>
+                </fieldset>
+                <fieldset class="f2">
+                <!-- POSITION(S) -->
+                    <p><strong>What position(s) do you normally play? (check all that apply)</strong></p>
+                    <div class="miniContainer">
+                        <input type="checkbox" name="Forward" id="check1">
+                        <label for="check1">Forward</label>
+                        <input type="checkbox" name="Defense" id="check2">
+                        <label for="check2">Defense</label>
+                        <input type="checkbox" name="Midfield" id="check3">
+                        <label for="check3">Midfield</label>
+                        <input type="checkbox" name="Goalkeeper" id="check4">
+                        <label for="check4">Goalkeeper</label>
+                    </div>
+                </fieldset>
+                <fieldset class="f3">
+                <!-- UNIFORM SIZE -->
+                    <p><strong>Uniform Size:</strong></p>
+                    <select name="size" id="size">
+                        <option disabled selected hidden> Choose an option</option>
+                        <option value="YS">Youth Small</option>
+                        <option value="YM">Youth Medium</option>
+                        <option value="YL">Youth Large</option>
+                        <option value="S">Small</option>
+                        <option value="M">Medium</option>
+                        <option value="L">Large</option>
+                        <option value="EL">Extra-Large</option>
+                    </select>
+                </fieldset>
+                <fieldset class="f4">
+                <!-- PERMISSION TO PLAY -->
+                    <p><strong>Permission to Play</strong></p>
+                    <p>I, the parent or guardian of the minor registrant, agree that the registrant, agree that the registrant and I will abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of physical injury associated with hockey and in  consideration for the "League" accepting the registrant for its hockey programs and activities, I hereby release, discharge, and/or otherwise indemnify MDHL, their employees and associated personnel and volunteers, including the facilities used for practices and games, against any claim by or on behalf of the registrant as a result of te activities, which transportation.</p>
+                    <p>By signing below, I here by agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the cancellation policy and agreee to its terms.</p>
+                <!-- PARENT -->
+                    <div class="miniContainer1">
+                    <label for="signature">Parent/Guardian Signature:</label>
+                        <input type="text" name="signature" id="signature">
+                    </div>
+                <!-- DATE -->
+                    <div class="miniContainer1">
+                    <label for="date">Date:</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <button type="submit">enviar</button>
+                </fieldset>
+            </form>
+        </article>
+    </section>
+</body>
+</html>

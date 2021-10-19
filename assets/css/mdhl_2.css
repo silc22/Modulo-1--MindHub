@@ -1,0 +1,745 @@
+
+/* IMPORT DE FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+/* ESTILOS GENERALES */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* enable colors */
+    --dark: #211915;
+    --primary: #f8e12e;
+    --secondary: #c64832;
+    --other: #189977;
+    /* disable colors */
+    --primaryD: #b4a425;
+    --secondaryD: #642318;
+    --otherD: #136e56;
+    /* opacity .6 colors */
+    --darkO: rgba(33, 25, 21, .6);
+    --primaryO: rgb(248, 225, 46, .6);
+    --secondaryO: rgb(198, 72, 50, .6);
+    --otherO: rgb(24, 153, 119, .6);
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark);
+}
+
+/* CONTENIDO ESTATICO */
+/* HEADER */
+
+.banner{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.navBar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: .3rem 0;
+}
+
+.brand{
+    margin: 0 .4rem;
+}
+
+.brand img{
+    width: 5rem;
+    filter: drop-shadow(1px 1px 15px #000);
+}
+
+/* TITULO */
+.title{
+    flex: 2 1 auto;
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px var(--secondary);
+    font-size: 2.5rem;
+}
+
+.title span{
+    display: block;
+    font-size: 1rem;
+    padding-top: .2rem;
+    
+}
+
+/* MENU DE NAVEGACION */
+.menuNav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 .4rem;
+    min-width: 7rem;
+    min-height: 7rem;
+}
+
+.menuNav ul{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: center;
+    border-right: 1px solid #615814;
+    padding: .3rem;
+}
+
+.menuNav li{
+    font-weight: bold;
+    font-size: .8rem;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.menuNav a{
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menuNav .uno{
+    color:var(--primaryD);
+}
+
+.menuNav .dos{
+    color:var(--secondaryD);
+}
+
+.menuNav .uno:hover{
+    text-shadow: 1px 0 15px var(--primary);
+    color: var(--primary);
+    font-size: 1rem;
+    
+}
+
+.menuNav .dos:hover{
+    text-shadow: 1px 0 15px var(--secondary);
+    color: var(--secondary);
+    font-size: 1rem;
+}
+
+/* IMAGEN DE FONDO  */
+.imgBanner{
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    animation: bg 1.5s cubic-bezier(0.11, 0, 0.5, 0) .2s 1 normal;
+}
+
+.indexP{
+    background-image: url(../img/img_3.jpg);
+    background-position: center 40%;
+}
+
+.aboutP{
+    background-image: url(../img/img_2.jpg);
+    background-position: center 40%;
+}
+
+.contactP{
+    background-image: url(../img/img_7.jpg);
+    background-position: center 20%;
+}
+
+.gameInfoP{
+    background-image: url(../img/img_5.jpg);
+    background-position: center 40%;
+}
+
+.rulesP{
+    background-image: url(../img/img_10.jpg);
+    background-position: center 30%;
+}
+
+.formP{
+    background-image: url(../img/img_4.jpg);
+    background-position: center 40%;
+}
+
+
+@keyframes bg {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* CONTENIDO DINAMICO */
+/* SECCION */
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--dark);
+}
+
+.subtitle{
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    padding: .3rem;
+    border-bottom: 1px solid var(--primary);
+    background-color: var(--dark);
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px var(--secondary)
+}
+
+.subtitle:hover{
+    transition: .3s;
+    text-shadow: 0 0 15px var(--primary);
+}
+
+/* ARTICULO */
+.contenido{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 29vh;
+}
+
+/* CONTENIDO INDEX */
+.ContenidoFechas{
+    display: flex;
+}
+
+.ContenidoFechas > dl{
+    color: #ffffff;
+    max-width: 30rem;
+    list-style: none;
+}
+
+.ContenidoFechas dt{
+    border-bottom: 1px solid var(--primary);
+    text-transform: uppercase;
+    margin: 1.5rem 0 0 0;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+.ContenidoFechas dt:hover{
+    transition: .3s;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+.ContenidoFechas dd{
+    margin: .3rem;
+}
+
+/* CONTENIDO ABOUT */
+.cardContain{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    max-width: 25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem;
+
+}
+
+.card h3{
+    color: #ffffff;
+    border-bottom: 1px solid var(--primary);
+    text-transform: uppercase;
+    margin: 1rem 0 .2rem .3rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+.card h3:hover{
+    transition: .3s;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+.card h3 > a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.card p{
+    color: #ffffff;
+    text-align: justify;
+    line-height: 1.5rem;
+    margin: 1rem 0 .2rem .3rem;
+}
+
+/* CONTENIDO DE CONTACT */
+.contenidoContact{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+}
+
+.contenidoContact  dt{
+    color: #ffffff;
+    display: inline;
+    border-bottom: 1px solid var(--primary);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+.contenidoContact dt:hover{
+    transition: .3s;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+.contenidoContact a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contenidoContact dd{
+    margin: .5rem 0;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 1.2rem;
+    font-style: italic;
+}
+
+/* CONTENIDO DE GAME INFORMATION */
+/* ---- CONTENIDO DE TABLA */
+.contenidoTabla{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    min-width: 10rem;
+}
+
+caption{
+    color: #ffffff;
+    margin: .5rem;
+}
+
+caption p{
+    font-style: italic;
+}
+
+table{
+    text-align: center;
+}
+
+thead{
+    text-transform: uppercase;
+    
+}
+
+thead .uno{
+    color:var(--primaryD);
+    border-bottom: 1px solid var(--primary);
+    padding: .5rem 1rem;
+}
+
+thead .dos{
+    color:var(--secondaryD);
+    border-bottom: 1px solid var(--primary);
+    padding: .5rem 1rem;
+    transition: .3s;
+}
+
+thead .uno:hover{
+    text-shadow: 1px 0 15px var(--primary);
+    color: var(--primary);
+    transition: .3s;
+}
+
+thead .dos:hover{
+    text-shadow: 1px 0 15px var(--secondary);
+    color: var(--secondary);
+}
+
+td{
+    color: #ffffff;
+    border-bottom: 1px solid var(--primary);
+    padding: .5rem 1rem;
+}
+
+.map{
+    padding: .2rem;
+}
+
+/* CONTENIDO DE DATOS */
+.contenidoDatos{
+    max-width: 40rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    margin: 1rem 0;
+    background-color: var(--dark);
+    color: #ffffff;
+}
+
+.primeraParte{
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+.segundaParte{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.contenidoDatos li {
+    padding: .5rem;
+    list-style: none;
+    text-align: justify;
+}
+
+.contenidoDatos a{
+    text-decoration: none;
+    color: #ffffff
+}
+
+.contenidoDatos strong{
+    border-bottom: 1px solid var(--primary);
+    text-transform: uppercase;
+}
+
+/* CONTENIDO DE RULES */
+.containerRules{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem 2rem;
+    color: #ffffff;
+    max-width: 80vw;
+}
+
+.containerRules dt{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: .5rem 0;
+    
+}
+
+.containerRules h3{
+    font-weight: bold;
+    padding: .5rem 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.containerRules h3:hover{
+    transition: .3s;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+.containerRules h4{
+    font-weight: bold;
+    padding: .5rem 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+.containerRules h4:hover{
+    transition: .3s;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+
+.listaPrincipal li{
+    margin: .5rem 0;
+    text-align: justify;
+}
+
+.puntoTres li{
+    margin: .5rem 2rem;
+    text-align: justify;
+}
+
+.containerRules ul li{
+    margin: .5rem 2rem;
+    text-align: justify;
+}
+
+.listaD dt{
+    margin: .5rem 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+
+.listaD dt:hover{
+    transition: .3s;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+/* ESTILO DE FORMULARIO */
+/* --- estilos generales del formulario --- */
+form{
+    max-width: 50vw;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: .5rem;
+}
+
+fieldset{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    border: unset;
+    border-radius: 2px;
+}
+
+input, input[type=number]{
+    color: #ffffff;
+    border: unset;
+    padding: .3rem;
+    background-color: var(--dark);
+    border-bottom: 1px solid var(--primary);
+    background-image: unset;
+}
+
+input:focus, input[type=number]:focus{
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+select{
+    width: 12rem;
+    font: normal 1rem 'Roboto';
+    background-color: var(--dark);
+    color: #ffffff;
+    border: unset;
+    border-bottom: 1px solid var(--primary);
+}
+
+select:focus{
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+/* --- estilos especificos del formulario --- */
+.fName{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.fName input{
+    width: 35%;
+}
+
+.fDireccion{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.fDireccion input{
+    width: calc(90% - 40px)
+}
+
+.fCiudad{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.fCiudad input{
+    width: calc(46% - 25px)
+}
+
+.fBirth{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.fBirth input:not(input[type=radio]){
+    width: 30%;
+}
+
+.fBirth p{
+    margin: 0 .5rem;
+}
+
+.fBirth input[type=radio]{
+    margin: 0 .5rem;
+}
+
+.fGrado{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.fGrado p{
+    margin: 0 .8rem 0 0;
+}
+
+.f1{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.f1 p{
+    margin: .5rem 0
+}
+
+
+.f2{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.f2 p{
+    margin: .5rem 0
+}
+
+.miniContainer{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 15rem;
+}
+
+.miniContainer input{
+    margin: 0 .3rem 0 2rem;
+}
+
+.f3{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    
+}
+
+.f3 p{
+    margin: .5rem 0
+}
+
+.f4{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    border-top: 1px solid var(--primaryD);
+}
+
+.f4 p{
+    text-align: justify;
+    margin: .3rem;
+}
+
+.miniContainer1{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.miniContainer1 label{
+    margin: .5rem;
+}
+
+.miniContainer1 input{
+    width: 30%;
+}
+
+.f4 button{
+    display: block;
+    margin: auto;
+    padding: .5rem 0;
+    width: 4rem;
+    list-style: none;
+    text-transform: uppercase;
+    color:var(--primaryD);
+    background-color:unset;
+    border:unset;
+    border-bottom: 1px solid var(--primaryD);
+    font: bold 1em 'Roboto';
+}
+
+.f4 button:hover{
+    text-shadow: 1px 0 15px var(--primary);
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: .3s;
+}
+
+
+/* MEDIA QUERYS */
+@media (max-width: 600px) {    
+    
+    .navBar{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .menuNav{
+        min-height: 2rem;
+        margin-top: .8rem;
+
+    }
+    .menuNav ul{
+        display: flex;
+        flex-flow: row wrap;
+        border-right: none;
+}
+
+    .menuNav li{
+        padding: 0 .5rem;
+        border-right: 1px solid #615814;
+        border-left: 1px solid #615814;;
+    }
+}
+
+/* ESTILO SHOW DATA */
+.contenidoS {
+    color: #ffffff;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.contenidoS h3{
+    margin: .3rem 0;
+}
+
+.contenidoS h3:hover{
+    text-shadow: 1px 1px 15px #FFFFFF;
+    transition: .3s;
+}
+
+.contenidoS table{
+    border: unset;
+}
+
+.contenidoS th{
+    border: unset;
+    border-bottom: 1px solid var(--primary);
+}
+
+.contenidoS td{
+    border: unset;
+    border-bottom: 1px solid var(--primary);
+}
